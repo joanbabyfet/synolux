@@ -1,0 +1,26 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build --dotenv .env",
+    "build-test": "nuxt build --dotenv .env.test",
+    "build-prod": "nuxt build --dotenv .env.production",
+    "dev": "nuxt dev",
+    "dev-test": "nuxt dev --dotenv .env.test",
+    "dev-prod": "nuxt dev --dotenv .env.production",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@nuxt/ui": "^2.14.2",
+    "nprogress": "^0.2.0",
+    "nuxt": "^3.10.3",
+    "vue": "^3.4.19",
+    "vue-router": "^4.3.0"
+  },
+  "devDependencies": {
+    "@nuxtjs/i18n": "^8.0.0"
+  }
+}
