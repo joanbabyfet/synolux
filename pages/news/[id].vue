@@ -42,17 +42,10 @@ const getNewsInfo = async () => {
         },
     })
     if (error.value) {
-        console.log(error.value)
+        throw showError({ statusCode: 404, statusMessage: 'Page Not Found' })
+        //以下方式不会跳转到错误页 error.vue
+        //throw createError({statusCode: 404, statusMessage: "Page not found.", fatal: true})
     }
-    if(!data.value) {
-        console.log('error')
-    }
-    else if(data.value.code === 0) {
-        console.log(data.value.msg)
-        info.value = data.value
-    }
-    else {
-        console.log(data.value.msg)
-    }
+    info.value = data.value
 }
 </script>

@@ -5,12 +5,12 @@
     <div id="HeaderNavIdx">
         <div id="innerHeaderNavIdx">
             <ul>
-                <li><NuxtLink :to="localePath('/')" class="current">{{ $t('backHome') }}</NuxtLink></li>
-                <li><NuxtLink :to="localePath('/about')">{{ $t('nav.about') }}</NuxtLink></li>
-                <li><NuxtLink :to="localePath('/news')">{{ $t('nav.news') }}</NuxtLink></li>
-                <li><NuxtLink :to="localePath('/products')">{{ $t('nav.products') }}</NuxtLink></li>
-                <li><NuxtLink :to="localePath('/service')">{{ $t('nav.service') }}</NuxtLink></li>
-                <li><NuxtLink :to="localePath('/contact')">{{ $t('nav.contact') }}</NuxtLink></li>
+                <li><NuxtLink :to="localePath('/')" activeClass="current">{{ $t('backHome') }}</NuxtLink></li>
+                <li><NuxtLink :to="localePath('/about')" activeClass="current">{{ $t('nav.about') }}</NuxtLink></li>
+                <li><NuxtLink :to="localePath('/news')" activeClass="current">{{ $t('nav.news') }}</NuxtLink></li>
+                <li><NuxtLink :to="localePath('/products')" activeClass="current">{{ $t('nav.products') }}</NuxtLink></li>
+                <li><NuxtLink :to="localePath('/service')" activeClass="current">{{ $t('nav.service') }}</NuxtLink></li>
+                <li><NuxtLink :to="localePath('/contact')" activeClass="current">{{ $t('nav.contact') }}</NuxtLink></li>
             </ul>
         </div>
     </div>
