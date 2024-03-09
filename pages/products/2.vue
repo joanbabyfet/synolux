@@ -34,17 +34,17 @@
         <div class="productBox productBoxEnd"><a name="vedio" id="p4"></a>
             <h4>焊接過程中助焊劑(FLUX)應用</h4>
             <div>
-                <iframe width="420" height="315" src="http://www.youtube.com/embed/E87-I0d-5Gk"
+                <iframe width="420" height="315" src="https://www.youtube.com/embed/E87-I0d-5Gk"
                         frameborder="0" allowfullscreen></iframe>
             </div>
             <h4>Through-Hole焊接影片</h4>
             <div>
-                <iframe width="420" height="315" src="http://www.youtube.com/embed/GgEeYKjCxJE"
+                <iframe width="420" height="315" src="https://www.youtube.com/embed/GgEeYKjCxJE"
                         frameborder="0" allowfullscreen></iframe>
             </div>
             <h4>相關線材焊接影片</h4>
             <div>
-                <iframe width="420" height="315" src="http://www.youtube.com/embed/yPvZLZru6V0"
+                <iframe width="420" height="315" src="https://www.youtube.com/embed/yPvZLZru6V0"
                         frameborder="0" allowfullscreen></iframe>
             </div>
         </div>
