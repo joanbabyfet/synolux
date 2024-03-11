@@ -1,13 +1,19 @@
 <template>
-    <div class="content">
-        <div class="maintenance">
-            <h1>Maintenance Mode</h1>
-            <h1>admin@admin</h1>
+    <div class="middle-box text-center animated fadeInDown">
+        <h1>503</h1>
+        <h3 class="font-bold">系统维护中，请稍后再试。谢谢</h3>
+
+        <div class="error-desc">
+            <p>admin@admin </p>
         </div>
     </div>
 </template>
 
 <script setup>
+//引入样式
+import '@/assets/css/style.min.css'
+import '@/assets/css/animate.min.css' 
+
 definePageMeta({
     layout: "custom",
 });

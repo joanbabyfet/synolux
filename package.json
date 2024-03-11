@@ -4,11 +4,11 @@
   "type": "module",
   "scripts": {
     "build": "nuxt build --dotenv .env",
-    "build-test": "nuxt build --dotenv .env.test",
-    "build-prod": "nuxt build --dotenv .env.production",
+    "build:test": "nuxt build --dotenv .env.test",
+    "build:prod": "nuxt build --dotenv .env.prod",
     "dev": "nuxt dev",
-    "dev-test": "nuxt dev --dotenv .env.test",
-    "dev-prod": "nuxt dev --dotenv .env.production",
+    "dev:test": "nuxt dev --dotenv .env.test",
+    "dev:prod": "nuxt dev --dotenv .env.prod",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
