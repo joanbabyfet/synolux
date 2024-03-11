@@ -33,8 +33,8 @@ export default defineNuxtConfig({
   ],
   //全局引入css文件
   css: [
-    '@/assets/style.css',
-    //'@/assets/form.css'
+    '@/assets/css/style.css',
+    //'@/assets/css/form.css'
   ],
   modules: [
     '@nuxt/ui', '@nuxtjs/i18n'
