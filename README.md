@@ -4,7 +4,7 @@
 ## Feature
 
 * 使用 i18n 实现多语言切换
-* 支持多环境开发配置 .env/.env.test/.env.production
+* 支持多环境开发配置 .env/.env.test/.env.prod
 
 ## Usage
 ```

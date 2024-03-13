@@ -15,5 +15,6 @@ definePageMeta({
     layout: 'home'
 })
 //打印当前环境
-console.log(process.env.NUXT_PUBLIC_MODE_ENV)
+const config = useRuntimeConfig()
+console.log(config.public.NUXT_ENV)
 </script>

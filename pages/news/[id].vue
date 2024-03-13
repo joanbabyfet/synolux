@@ -1,9 +1,9 @@
 <template>
-    <h1>最新消息</h1>
+    <h1>{{ $t('news.title') }}</h1>
     <div id="subMenu">
         <div id="innerSubMenu">
             <div id="pagePath"><NuxtLink :to="localePath('/')">{{ $t('backHome') }}</NuxtLink><span class="side2">&nbsp;</span>
-                <NuxtLink :to="localePath('/news')">最新消息</NuxtLink><span class="side2">&nbsp;</span>詳細內容
+                <NuxtLink :to="localePath('/news')">{{ $t('news.title') }}</NuxtLink><span class="side2">&nbsp;</span>詳細內容
             </div>
         </div>
     </div>
