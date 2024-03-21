@@ -9,7 +9,9 @@ export default function() {
             'id': id,
         }
         getNewsInfo({ params: JSON.stringify(data) }).then(res => {
-            info.value = res
+            if(res.code === 0) {
+                info.value = res.data
+            }
         }).catch((err)=>{
             console.log(err)
         })

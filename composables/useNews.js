@@ -12,8 +12,10 @@ export default function() {
             'page_size': pageSize.value,
         }
         getNews({ params: JSON.stringify(data) }).then(res => {
-            list.value = res.list
-            total.value = res.count
+            if(res.code === 0) {
+                list.value = res.data.list
+                total.value = res.data.count
+            }
         }).catch((err)=>{
             console.log(err)
         })

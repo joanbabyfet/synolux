@@ -9,7 +9,9 @@ export default function() {
             'page_size': 3,
         }
         getNews({ params: JSON.stringify(data) }).then(res => {
-            list.value = res.list
+            if(res.code === 0) {
+                list.value = res.data.list
+            }
         }).catch((err)=>{
             console.log(err)
         })

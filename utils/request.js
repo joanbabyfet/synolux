@@ -16,22 +16,19 @@ const fetch = async (url, options, headers) => {
         }
 
         if (result) {
-            if (result.code === 0) { //code为0表成功
-                //console.log(result.data)
-                return result.data
-            }
+            return result
 
-            if (result.code === -4002) { //未登录则跳转到登入页
-                router.push({
-                    path: localePath('/login'),
-                    query: {
-                        redirect: encodeURIComponent(router.currentRoute.value)
-                    }
-                })
-            }
-            else {
-                return Promise.reject(result)
-            }
+            // if (result.code === -4002) { //未登录则跳转到登入页
+            //     router.push({
+            //         path: localePath('/login'),
+            //         query: {
+            //             redirect: encodeURIComponent(router.currentRoute.value)
+            //         }
+            //     })
+            // }
+            // else {
+            //     return Promise.reject(result)
+            // }
         }
     }
     catch(e) {
