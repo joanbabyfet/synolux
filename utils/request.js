@@ -1,35 +1,33 @@
-//封装useFetch请求方便管理
+//封装 $fetch 
 const fetch = async (url, options, headers) => {
     try {
         await nextTick() //防止刷新页面时获取不到数据
         const config = useRuntimeConfig()
-        const router = useRouter()
-        const localePath = useLocalePath(); //根据当前语言解析路由 /about to /zh/about
-        const reqUrl = config.public.BASE_URL + url
 
-        const { data, error } = await useFetch(reqUrl, {
-            ...options,
+        const res = await $fetch(url, {
+            baseURL: config.public.BASE_URL,
+            method: options.method,
+            params: options.params ?? null,
+            body: options.body ?? null,
+            //请求拦截
+            onRequest({ request, options }) {
+                options.headers = options.headers || {}
+            },
+            //请求错误处理
+            onRequestError({ request, options, error }) {
+                console.log('服务器连接失败')
+                Promise.reject(error)
+            },
+            //响应拦截
+            onResponse({ request, response, options }) {
+                Promise.resolve(response._data)
+            },
+            //响应错误处理
+            onResponseError({ request, response, options }) {
+
+            },
         })
-        const result = data.value
-        if (error.value) {
-            return Promise.reject(error)
-        }
-
-        if (result) {
-            return result
-
-            // if (result.code === -4002) { //未登录则跳转到登入页
-            //     router.push({
-            //         path: localePath('/login'),
-            //         query: {
-            //             redirect: encodeURIComponent(router.currentRoute.value)
-            //         }
-            //     })
-            // }
-            // else {
-            //     return Promise.reject(result)
-            // }
-        }
+        return res
     }
     catch(e) {
         return Promise.reject(e)
