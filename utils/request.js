@@ -5,7 +5,7 @@ const fetch = async (url, options, headers) => {
         const config = useRuntimeConfig()
 
         const res = await $fetch(url, {
-            baseURL: config.public.BASE_URL,
+            baseURL: config.public.BASE_API,
             method: options.method,
             params: options.params ?? null,
             body: options.body ?? null,
