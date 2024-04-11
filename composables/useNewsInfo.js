@@ -8,7 +8,7 @@ export default function() {
         let data = {
             'id': id,
         }
-        getNewsInfo({ params: JSON.stringify(data) }).then(res => {
+        getNewsInfo(data).then(res => {
             if(res.code === 0) {
                 info.value = res.data
             }

@@ -9,6 +9,7 @@ const fetch = async (url, options, headers) => {
             method: options.method,
             params: options.params ?? null,
             body: options.body ?? null,
+            headers: headers ?? null,
             //请求拦截
             onRequest({ request, options }) {
                 options.headers = options.headers || {}

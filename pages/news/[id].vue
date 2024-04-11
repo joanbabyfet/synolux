@@ -8,7 +8,7 @@
         </div>
     </div>
     <div id="mainContents">
-        <h2>{{ info.name }}</h2>
+        <h2>{{ info.title }}</h2>
         {{ info.content }}
         <div class="files">
             <ul>

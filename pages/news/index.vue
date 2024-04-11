@@ -8,7 +8,7 @@
     <div class="newsList">
         <ul>
             <li v-for="item in list" :key="item.id">
-                <NuxtLink :to="localePath(`/news/${item.id}`)">{{ item.name }}</NuxtLink>
+                <NuxtLink :to="localePath(`/news/${item.id}`)">{{ item.title }}</NuxtLink>
             </li>
         </ul>
         <!-- <p>目前無最新訊息...</p> -->

@@ -5,10 +5,10 @@ export default function() {
 
     function getList() {
         let data = {
-            'page': 1,
-            'page_size': 3,
+            'limit': 3,
+            'is_hot': 1,
         }
-        getNews({ params: JSON.stringify(data) }).then(res => {
+        getNews(data).then(res => {
             if(res.code === 0) {
                 list.value = res.data.list
             }

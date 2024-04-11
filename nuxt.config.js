@@ -14,7 +14,7 @@ export default defineNuxtConfig({
               ws: true, //是否代理websocket
               changeOrigin: true, //是否跨域
               secure: false, //是否https接口
-              rewrite: (path) => path.replace(/^\/api/, '/api')
+              rewrite: (path) => path.replace(/^\/api/, '/')
           }
       }
     }
