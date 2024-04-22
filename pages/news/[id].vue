@@ -9,7 +9,7 @@
     </div>
     <div id="mainContents">
         <h2>{{ info.title }}</h2>
-        {{ info.content }}
+        <div v-html:="info.content"></div>
         <div class="files">
             <ul>
                 <li class="iconPDF"></li>

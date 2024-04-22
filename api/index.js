@@ -2,6 +2,11 @@
 import request from "../utils/request"
 
 //获取新闻列表
+export const getHomeNews = (params, headers) => {
+    return request.get('/v1/home_article', params, headers)
+}
+
+//获取新闻列表
 export const getNews = (params, headers) => {
     return request.get('/v1/article', params, headers)
 }
