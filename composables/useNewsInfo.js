@@ -2,6 +2,7 @@ import { getNewsInfo } from '../api/index'
 
 export default function() {
     const info = ref({})
+    const content = ref('')
     const route = useRoute()
 
     function getInfo(id) {
@@ -11,6 +12,7 @@ export default function() {
         getNewsInfo(data).then(res => {
             if(res.code === 0) {
                 info.value = res.data
+                content.value = res.data.Content
             }
         }).catch((err)=>{
             console.log(err)
@@ -22,6 +24,7 @@ export default function() {
     })
 
     return {
-        info
+        info, 
+        content
     }
 }

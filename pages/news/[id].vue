@@ -9,7 +9,7 @@
     </div>
     <div id="mainContents">
         <h2>{{ info.title }}</h2>
-        <div v-html:="info.content"></div>
+        <div v-html="content"></div>
         <div class="files">
             <ul>
                 <li class="iconPDF"></li>
@@ -22,5 +22,5 @@
 const localePath = useLocalePath(); //根据当前语言解析路由 /about to /zh/about
 
 //頁面使用組合函数
-const { info } = useNewsInfo()
+const { info, content } = useNewsInfo()
 </script>
